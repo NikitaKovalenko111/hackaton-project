@@ -16,8 +16,6 @@ interface IData {
 
 const dataObj: IData = data
 
-console.log(Object.keys(data2));
-
 app.use(express.json());
 
 type ReqDictionary = {}
@@ -27,12 +25,64 @@ type ResBody = { }
 
 type HandlerRequest = Request<ReqDictionary, ResBody, ReqBody, ReqQuery>
 
+interface IPoint {
+    [key: string]: {
+        "photo": string,
+        "nums": Array<string>
+    }
+}
+
 app.get('/navigate', (req: HandlerRequest, res: Response) => {
     const start: string = req.query.start
     const end: string = req.query.end
 
+    let startBlock: string = ''
+    let endBlock: string = '' 
+
+    Object.keys(data2).forEach(el => {
+        // @ts-ignore
+        if (data2[el]["nums"].length > 0) { 
+            // @ts-ignore
+            if (data2[el].nums.includes(start)) {
+                startBlock = el
+            }
+        }
+        else {
+            if (el == start) {
+                startBlock = start
+            }
+        }
+    })
+
+    Object.keys(data2).forEach(el => {
+        // @ts-ignore
+        if (data2[el]["nums"].length > 0) {      
+            // @ts-ignore
+            if (data2[el].nums.includes(end)) {
+                endBlock = el
+            }
+        }
+        else {
+            if (el == end) {
+                endBlock = end
+            }
+        }
+    })
+
+    if (startBlock == '' || endBlock == '') {
+        res.send('Блок не найден, аудитории не существует!')
+    }
+    
     // @ts-ignore
-    res.send(dataObj[start][end].path.split('/'))
+    const points = dataObj[startBlock][endBlock].path.split('/')
+    const finalPoints: Array<IPoint> = []
+
+    points.forEach(el => {
+        // @ts-ignore
+        finalPoints.push(data2[el])
+    })
+
+    res.send(finalPoints)
 })
 
 export default app;
