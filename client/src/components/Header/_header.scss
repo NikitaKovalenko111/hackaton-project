@@ -1,0 +1,44 @@
+.header {
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+
+    &__container {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav-list {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        list-style: none;
+    }
+
+    &__menu {
+        display: none;
+    }
+
+    &__nav-list-item {
+        font-size: 20px;
+        font-family: "Open Sans", sans-serif;
+        
+        a {
+            text-decoration: none;
+            &:hover {
+                color: #5300d6;
+            }
+            color: black;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        &__nav-list {
+            display: none;
+        }
+
+        &__menu {
+            display: block;
+        }
+    }
+}

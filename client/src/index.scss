@@ -1,0 +1,35 @@
+@import './components/Header/header',
+        './components/About/about',
+        './components/Faq/faq',
+        './components/Modal/modal',
+        './components/Footer/footer';
+
+.container {
+    max-width: 1280px;
+    padding: 0 16px;
+    display: block;
+    margin: 0 auto;
+}
+
+.modal-active {
+    display: none !important;
+}
+
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.main {
+    padding: 20px;
+    height: 100%;
+    flex-grow: 1;
+}

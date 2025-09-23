@@ -1,0 +1,22 @@
+{
+  "name": "hackaton-project",
+  "version": "1.0.0",
+  "scripts": {
+    "start:server:dev": "yarn --cwd ./server start:dev",
+    "start:server": "yarn --cwd ./server start",
+    "start:client": "yarn --cwd ./client start",
+    "build:client": "yarn --cwd ./client build",
+    "build:server": "yarn --cwd ./server build",
+    "start:dev": "concurrently \"yarn start:server:dev\" \"yarn start:client\"",
+    "start": "concurrently \"yarn start:server\" \"yarn start:client\"",
+    "build": "concurrently \"yarn build:server\" \"yarn build:client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "NikitaKovalenko111 <nikitakovalenko7219@gmail.com>",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

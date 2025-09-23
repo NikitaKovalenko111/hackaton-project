@@ -1,0 +1,39 @@
+.faq {
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__item {
+        padding: 15px;
+        text-align: left;
+        border: 2px solid #5807d7;
+        border-radius: 20px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        background-color: white;
+        color: black;
+    }
+
+    &__item-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 15px;
+    }
+
+    &__item-close-button {
+        cursor: pointer;
+    }
+
+    &__item-answer {
+        display: none;
+        padding-top: 15px;
+        border-top: 1px solid #5300d6;
+
+        &--active {
+            display: block;
+        }
+    }
+}
