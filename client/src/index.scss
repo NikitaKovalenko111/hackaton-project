@@ -2,6 +2,7 @@
         './components/About/about',
         './components/Faq/faq',
         './components/Modal/modal',
+        './components/Navigator/navigator',
         './components/Footer/footer';
 
 .container {
@@ -32,4 +33,7 @@
     padding: 20px;
     height: 100%;
     flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
