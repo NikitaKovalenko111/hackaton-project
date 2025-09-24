@@ -3,12 +3,7 @@ import config from './config.js';
 import type { Request, Response } from 'express';
 import cors from 'cors'
 
-var corsOptions = {
-    origin: true,
-    optionsSuccessStatus: 200,
-}
-
-app.use(cors(corsOptions))
+app.use(cors())
 
 app.listen(config.port, () => {
   console.log(`Server running on port ${config.port}`);
