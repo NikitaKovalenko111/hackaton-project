@@ -15,7 +15,7 @@ interface PropsType {
 }
 
 const NavigatorPoint: React.FC<PropsType> = ({ photoSrc, setStartPoint, setEndPoint, text, nums, index, setCurrentIndex, currentIndex, lastIndex, setShowInput }): JSX.Element => {
-    const photo = require('./../../../../../photos' + photoSrc);
+    const photo = require('./../../../../../photos/' + photoSrc);
 
     const nextButtonHandler = () => {
         setCurrentIndex(index + 1)
