@@ -6,12 +6,7 @@ import cors from 'cors'
 
 const app = express();
 
-const corsOptions = {
-    origin: 'http://185.185.68.35:3000',
-    optionsSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions))
+app.use(cors())
 
 interface IData {
     [key: string]: {

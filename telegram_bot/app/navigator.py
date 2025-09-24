@@ -51,7 +51,8 @@ async def process_start_point(message: Message, state: FSMContext):
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.get(full_url) as response:
-                    data = await response.json()
+                    res = await response.json()
+                    data = res["points"]
 
                     if response.status == 200:
                         if "error" in data:
