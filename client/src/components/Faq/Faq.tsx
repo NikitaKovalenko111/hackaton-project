@@ -4,18 +4,45 @@ import FaqItem from "./FaqItem/FaqItem";
 const questions = [
     {
         id: 1,
-        question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi natus voluptatem tempora, perferendis sequi officiis ipsum amet, impedit asperiores eligendi aspernatur odio consequatur saepe praesentium qui, optio dicta aliquid mollitia.',
-        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi et aspernatur totam. Modi, maxime velit. Quia et minus veritatis quo voluptas iusto saepe enim. Soluta nemo magnam nam impedit animi?'
+        question: 'О стипендии',
+        answer: 'Стипендия - любимое слово каждого студента. Получают ее 25 числа каджого месяца, а если дата приходится на выходные, то раньше. При неудачной сдаче сессии(у вас есть тройки/двойки или незачёты,задолженности) можете забыть о ней до следующего семестра, если, конечно, вы хорошо закроете сессию. Существует несколько видов стипендий,посмотрим с чем их едят, а также немного про материальную помощь'
     },
     {
         id: 2,
-        question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi natus voluptatem tempora, perferendis sequi officiis ipsum amet, impedit asperiores eligendi aspernatur odio consequatur saepe praesentium qui, optio dicta aliquid mollitia.',
-        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi et aspernatur totam. Modi, maxime velit. Quia et minus veritatis quo voluptas iusto saepe enim. Soluta nemo magnam nam impedit animi?'
+        question: 'Что делать если мне нужна материальная помощь?',
+        answer: 'Материальная помощь — это единовременная выплата, по различным социальным причинам.Получать её могут и бюджетники, и платники, если они состоят в Профсоюзе. Для этого следует лишь собрать документы и принести их в профком (не забудьте профсоюзный билет) не позднее какого-то (20?28?) числа каждого месяца (может быть раньше в связи с праздниками/выходными), сама выплата приходит в следующем месяце.'
     },
     {
         id: 3,
-        question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi natus voluptatem tempora, perferendis sequi officiis ipsum amet, impedit asperiores eligendi aspernatur odio consequatur saepe praesentium qui, optio dicta aliquid mollitia.',
-        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi et aspernatur totam. Modi, maxime velit. Quia et minus veritatis quo voluptas iusto saepe enim. Soluta nemo magnam nam impedit animi?'
+        question: 'Что такое лекции и с чем их едят',
+        answer: 'пара, когда несколько групп собирают в одной большой душной аудитории и читают им материал. Стоит ли ходить? 50/50. Если хотите всё знать и уметь, то смело вставайте к первой паре. Если вы верите в себя и одногрупника, который ходил и всё записывал, то можете продлить свой сон. (Некоторые преподы отмечают на лекциях и могут проводить контрольные, узнайте об этом заранее)'
+    },
+    {
+        id: 4,
+        question: 'Что такое практика/сессия и с чем их едят',
+        answer: 'Практика - приходим, решаем задачки, вопросы решаем, ничего интересного. Ходить стоит, но если вы сверхчеловек, который сам всё может изучить, то появляйтесь хотя бы изредка'
+    },
+    {
+        id: 5,
+        question: 'Что такое Лабораторные и с чем их едят',
+        answer: 'Лабы - две пары подряд вы сидите и занимаетесь чем-то, прогуливать не стоит, потому что придётся отрабатывать. Защитить лабу - это показать, что вы разбираетесь в своей работе, а не списали её у друга за 10 минут до конца.'
+    },
+    {
+        id: 6,
+        question: 'Что такое Экзамен и с чем их едят',
+        answer: 'Экзамен - приходишь, решаешь задачки или отвечаешь письменно на вопросы, потом бубнишь перед преподом защиту, получаешь оценку. Также на многих предметах можно получить автомат по экзамену - скипнуть заучивание материала, решение билета и защиту. Автомат можно получить по разным причинам, но чаще всего за успехи в учебе во время семестра.'
+    },
+    {
+        id: 7,
+        question: 'Разновидности зачетов',
+        answer: 'Зачёт - надо просто все вовремя сдать и получить зачёт или незачёт. У некоторых преподавателей на некоторых дисциплинах надо сдать зачетную работу, чтобы получить этот самый.\nДиф зачет aka зачет с оценкой aka дифференцированный зачет - то же самое, что зачет, но он может поднасрать тебе в стипуху, если получишь «удовл.» (троечка).'
+    },
+    {
+        id: 8,
+        question: 'ИСУ? ШТА?',
+        answer: 'Знакомьтесь, это ИСУ — типа местные госуслуги: можно заказать справочки, посмотреть свои оценки, кинуть заявку на общагу и прочие мелочи жизни.'
+
+
     },
 ]
 

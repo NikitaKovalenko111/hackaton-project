@@ -5,12 +5,69 @@
     flex-basis: 400px;
 
     &__inputs {
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         gap: 15px;
         max-width: 400px;
         width: 100%;
+
+        &--shown {
+            display: flex;
+        }
+    }
+
+    &__path {
+        display: none;
+        flex-direction: column;
+        gap: 40px;
+
+        &--shown {
+            display: flex;
+        }
+    }
+
+    &__point {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__photo {
+        max-width: 1000px;
+        width: 100%;
+        border: 3px solid #5300d6;
+    }
+
+    &__point-num {
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+
+        span {
+            color: #5300d6;
+            font-family: "Open Sans", sans-serif;
+            font-size: 30px;
+        }
+    }
+
+    &__next-button {
+        height: 60px;
+        background-color: #5300d6;
+        outline: none;
+        border: 1px solid black;
+        color: white;
+        border-radius: 12px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    &__text {
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
     }
 
     &__input {

@@ -1,6 +1,6 @@
 .header {
   padding: 20px 0;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #5300d6;
 }
 .header__container {
   display: flex !important;
@@ -36,6 +36,36 @@
   }
 }
 
+.about {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.about__main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about__main p {
+  font-size: 20px;
+}
+.about__team {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about__team ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.about__team ul li {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .faq__items {
   display: flex;
   flex-direction: column;
@@ -50,6 +80,17 @@
   font-size: 16px;
   background-color: white;
   color: black;
+  width: 800px;
+}
+@media screen and (max-width: 850px) {
+  .faq__item {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .faq__item {
+    width: 250px;
+  }
 }
 .faq__item-wrapper {
   display: flex;
@@ -121,12 +162,60 @@
   flex-basis: 400px;
 }
 .navigator__inputs {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   gap: 15px;
   max-width: 400px;
   width: 100%;
+}
+.navigator__inputs--shown {
+  display: flex;
+}
+.navigator__path {
+  display: none;
+  flex-direction: column;
+  gap: 40px;
+}
+.navigator__path--shown {
+  display: flex;
+}
+.navigator__point {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.navigator__photo {
+  max-width: 1000px;
+  width: 100%;
+  border: 3px solid #5300d6;
+}
+.navigator__point-num {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.navigator__point-num span {
+  color: #5300d6;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+}
+.navigator__next-button {
+  height: 60px;
+  background-color: #5300d6;
+  outline: none;
+  border: 1px solid black;
+  color: white;
+  border-radius: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+}
+.navigator__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
 }
 .navigator__input {
   padding: 15px;
@@ -153,7 +242,7 @@
 
 .footer {
   padding: 20px 0;
-  border-top: 1px solid black;
+  border-top: 2px solid #5300d6;
 }
 .footer__container {
   display: flex !important;

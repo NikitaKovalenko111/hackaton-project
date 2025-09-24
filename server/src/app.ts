@@ -2,8 +2,16 @@ import express from 'express';
 import type { Request, Response } from 'express';
 import data from './data.json' with { type: 'json' }
 import data2 from './data2.json' with {type: 'json'}
+import cors from 'cors'
 
 const app = express();
+
+const corsOptions = {
+    origin: 'http://185.185.68.35:3000',
+    optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions))
 
 interface IData {
     [key: string]: {
@@ -19,9 +27,9 @@ const dataObj: IData = data
 app.use(express.json());
 
 type ReqDictionary = {}
-type ReqBody = { }
+type ReqBody = {}
 type ReqQuery = { start: string, end: string }
-type ResBody = { }
+type ResBody = {}
 
 type HandlerRequest = Request<ReqDictionary, ResBody, ReqBody, ReqQuery>
 
@@ -37,11 +45,11 @@ app.get('/navigate', (req: HandlerRequest, res: Response) => {
     const end: string = req.query.end
 
     let startBlock: string = ''
-    let endBlock: string = '' 
+    let endBlock: string = ''
 
     Object.keys(data2).forEach(el => {
         // @ts-ignore
-        if (data2[el]["nums"].length > 0) { 
+        if (data2[el]["nums"].length > 0) {
             // @ts-ignore
             if (data2[el].nums.includes(start)) {
                 startBlock = el
@@ -56,7 +64,7 @@ app.get('/navigate', (req: HandlerRequest, res: Response) => {
 
     Object.keys(data2).forEach(el => {
         // @ts-ignore
-        if (data2[el]["nums"].length > 0) {      
+        if (data2[el]["nums"].length > 0) {
             // @ts-ignore
             if (data2[el].nums.includes(end)) {
                 endBlock = el
@@ -70,9 +78,12 @@ app.get('/navigate', (req: HandlerRequest, res: Response) => {
     })
 
     if (startBlock == '' || endBlock == '') {
-        res.send('Блок не найден, аудитории не существует!')
+        res.send({
+            status: 0,
+            points: []
+        })
     }
-    
+
     // @ts-ignore
     const points = dataObj[startBlock][endBlock].path.split('/')
     const finalPoints: Array<IPoint> = []
@@ -82,7 +93,10 @@ app.get('/navigate', (req: HandlerRequest, res: Response) => {
         finalPoints.push(data2[el])
     })
 
-    res.send(finalPoints)
+    res.send({
+        status: 1,
+        points: finalPoints
+    })
 })
 
 export default app;
